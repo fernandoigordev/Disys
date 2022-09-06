@@ -21,17 +21,28 @@ type
     btnEmployee: TSpeedButton;
     imgEmployee: TImage;
     shpEmployee: TShape;
+    procedure btnStoreClick(Sender: TObject);
+    procedure btnEmployeeClick(Sender: TObject);
   private
     { Private declarations }
   public
     { Public declarations }
   end;
 
-var
-  frmViewMain: TfrmViewMain;
-
 implementation
+uses Router;
 
 {$R *.dfm}
 
-end.
+
+procedure TfrmViewMain.btnEmployeeClick(Sender: TObject);
+begin
+  GlobalRouter.SetRoute(tpEmployee);
+end;
+
+procedure TfrmViewMain.btnStoreClick(Sender: TObject);
+begin
+  GlobalRouter.SetRoute(tpStore);
+end;
+
+End.

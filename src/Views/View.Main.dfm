@@ -1,9 +1,9 @@
 object frmViewMain: TfrmViewMain
   Left = 0
   Top = 0
-  BorderStyle = bsDialog
-  ClientHeight = 561
-  ClientWidth = 844
+  BorderStyle = bsNone
+  ClientHeight = 768
+  ClientWidth = 1024
   Color = clWhite
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -17,8 +17,8 @@ object frmViewMain: TfrmViewMain
   object pnlContainer: TPanel
     Left = 0
     Top = 0
-    Width = 844
-    Height = 561
+    Width = 1024
+    Height = 768
     Align = alClient
     Caption = 'pnlContainer'
     Color = clWhite
@@ -31,11 +31,13 @@ object frmViewMain: TfrmViewMain
     ParentFont = False
     ShowCaption = False
     TabOrder = 0
+    ExplicitWidth = 850
+    ExplicitHeight = 590
     object imgLogo: TImage
       Left = 377
       Top = 1
-      Width = 466
-      Height = 559
+      Width = 646
+      Height = 766
       Align = alClient
       Center = True
       Picture.Data = {
@@ -1051,7 +1053,7 @@ object frmViewMain: TfrmViewMain
       Left = 1
       Top = 1
       Width = 376
-      Height = 559
+      Height = 766
       Align = alLeft
       BevelOuter = bvNone
       Color = 11829830
@@ -1064,9 +1066,10 @@ object frmViewMain: TfrmViewMain
       ParentFont = False
       ShowCaption = False
       TabOrder = 0
+      ExplicitHeight = 588
       object shpEmployee: TShape
-        Left = 185
-        Top = 436
+        Left = 196
+        Top = 621
         Width = 170
         Height = 60
         Brush.Color = 7451452
@@ -1076,7 +1079,7 @@ object frmViewMain: TfrmViewMain
       end
       object shpStore: TShape
         Left = 9
-        Top = 436
+        Top = 621
         Width = 170
         Height = 60
         Brush.Color = 15453879
@@ -1086,7 +1089,7 @@ object frmViewMain: TfrmViewMain
       end
       object imgStore: TImage
         Left = 12
-        Top = 440
+        Top = 625
         Width = 60
         Height = 50
         Center = True
@@ -1128,39 +1131,9 @@ object frmViewMain: TfrmViewMain
           CE01FC016002AA5F6CAAB7B50000000049454E44AE426082}
         Proportional = True
       end
-      object btnStore: TSpeedButton
-        Left = 67
-        Top = 436
-        Width = 111
-        Height = 60
-        Cursor = crHandPoint
-        Caption = 'Lojas'
-        Flat = True
-        Font.Charset = ANSI_CHARSET
-        Font.Color = clWhite
-        Font.Height = -16
-        Font.Name = 'Verdana'
-        Font.Style = []
-        ParentFont = False
-      end
-      object btnEmployee: TSpeedButton
-        Left = 243
-        Top = 436
-        Width = 111
-        Height = 60
-        Cursor = crHandPoint
-        Caption = 'Funcion'#225'rios'
-        Flat = True
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWhite
-        Font.Height = -16
-        Font.Name = 'Tahoma'
-        Font.Style = []
-        ParentFont = False
-      end
       object imgEmployee: TImage
-        Left = 188
-        Top = 440
+        Left = 199
+        Top = 626
         Width = 60
         Height = 50
         Center = True
@@ -1277,11 +1250,43 @@ object frmViewMain: TfrmViewMain
           0000000049454E44AE426082}
         Proportional = True
       end
+      object btnStore: TSpeedButton
+        Left = 67
+        Top = 621
+        Width = 111
+        Height = 60
+        Cursor = crHandPoint
+        Caption = 'Lojas'
+        Flat = True
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWhite
+        Font.Height = -11
+        Font.Name = 'Tahoma'
+        Font.Style = [fsBold]
+        ParentFont = False
+        OnClick = btnStoreClick
+      end
+      object btnEmployee: TSpeedButton
+        Left = 254
+        Top = 621
+        Width = 111
+        Height = 60
+        Cursor = crHandPoint
+        Caption = 'Funcion'#225'rios'
+        Flat = True
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWhite
+        Font.Height = -11
+        Font.Name = 'Tahoma'
+        Font.Style = []
+        ParentFont = False
+        OnClick = btnEmployeeClick
+      end
       object pnlTop: TPanel
         Left = 0
         Top = 0
         Width = 376
-        Height = 248
+        Height = 409
         Align = alTop
         BevelOuter = bvNone
         Color = 11829830
@@ -1292,7 +1297,7 @@ object frmViewMain: TfrmViewMain
           Left = 0
           Top = 0
           Width = 376
-          Height = 207
+          Height = 368
           Align = alClient
           Alignment = taCenter
           Caption = 'Disys Store'
@@ -1303,15 +1308,13 @@ object frmViewMain: TfrmViewMain
           Font.Style = [fsBold]
           ParentFont = False
           Layout = tlBottom
-          ExplicitLeft = 1
-          ExplicitTop = 1
           ExplicitWidth = 304
           ExplicitHeight = 59
         end
         object Label2: TLabel
           AlignWithMargins = True
           Left = 3
-          Top = 210
+          Top = 371
           Width = 370
           Height = 35
           Align = alBottom
@@ -1324,9 +1327,8 @@ object frmViewMain: TfrmViewMain
           Font.Style = []
           ParentFont = False
           Layout = tlBottom
-          ExplicitLeft = 4
-          ExplicitTop = 209
-          ExplicitWidth = 346
+          ExplicitLeft = 0
+          ExplicitTop = 213
         end
       end
     end
