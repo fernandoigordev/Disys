@@ -1,17 +1,17 @@
 unit Router;
 
 interface
-uses Vcl.Controls, Vcl.Forms, View.Main, View.StoreSearch;
+uses Vcl.Controls, Vcl.Forms, View.StoreSearch, View.EmployeeSearch;
 
 type
 
-TPage = (tpMain, tpStore, tpEmployee);
+TPage = (tpStore, tpEmployee);
 
 TRouter = Class
   private
     FContainer: TWinControl;
-    FPageMain: TfrmViewMain;
     FPageStoreSearch: TfrmStoreSearch;
+    FPageEmployeeSearch: TfrmEmployeeSearch;
   public
     Constructor Create(AContainer: TWinControl);
     Destructor Destroy;override;
@@ -39,29 +39,32 @@ end;
 procedure TRouter.SetRoute(APage: TPage);
 begin
   case APage of
-    tpMain:
-    begin
-      if not Assigned(FPageMain) then
-      begin
-        FPageMain := TfrmViewMain.Create(Application);
-        FPageMain.Parent := FContainer;
-        FPageMain.Align := alClient;
-        FPageMain.Show;
-      end;
-     FPageMain.BringToFront;
-    end;
     tpStore:
     begin
-      if not Assigned(FPageStoreSearch) then
+      if (not Assigned(FPageStoreSearch)) or (FPageStoreSearch = nil) then
       begin
         FPageStoreSearch := TfrmStoreSearch.Create(Application);
         FPageStoreSearch.Parent := FContainer;
         FPageStoreSearch.Align := alClient;
-        FPageStoreSearch.Show;
       end;
-     FPageStoreSearch.BringToFront;
+      if Not FPageStoreSearch.Showing then
+        FPageStoreSearch.Show;
+
+      FPageStoreSearch.BringToFront;
     end;
-    tpEmployee: ;
+    tpEmployee:
+    begin
+      if (not Assigned(FPageEmployeeSearch)) or (FPageEmployeeSearch = nil) then
+      begin
+        FPageEmployeeSearch := TfrmEmployeeSearch.Create(Application);
+        FPageEmployeeSearch.Parent := FContainer;
+        FPageEmployeeSearch.Align := alClient;
+      end;
+
+      if Not FPageEmployeeSearch.Showing then
+        FPageEmployeeSearch.Show;
+      FPageEmployeeSearch.BringToFront;
+    end;
   end;
 
 end;

@@ -12,7 +12,6 @@ type
   TfrmBaseSearch = class(TForm)
     pnlTop: TPanel;
     pnlbuttonsTop: TPanel;
-    Image1: TImage;
     Label1: TLabel;
     pnlContainer: TPanel;
     pnlButtonRight: TPanel;
@@ -47,7 +46,6 @@ type
     imgClose: TImage;
     ShapeClose: TShape;
     btnClose: TSpeedButton;
-    procedure Image1Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure btnAllClick(Sender: TObject);
     procedure btnFilterClick(Sender: TObject);
@@ -55,6 +53,7 @@ type
     procedure btnAlterClick(Sender: TObject);
     procedure btnDeleteClick(Sender: TObject);
     procedure btnSearchClick(Sender: TObject);
+    procedure btnCloseClick(Sender: TObject);
   private
     { Private declarations }
   protected
@@ -91,6 +90,11 @@ begin
   FControllerBase.ReadAllItems;
 end;
 
+procedure TfrmBaseSearch.btnCloseClick(Sender: TObject);
+begin
+  Close;
+end;
+
 procedure TfrmBaseSearch.btnDeleteClick(Sender: TObject);
 begin
   if MessageDlg('Deseja realmente excluir este item?', mtConfirmation, [mbYes, mbNo],0) = mrYes then
@@ -114,11 +118,6 @@ procedure TfrmBaseSearch.FormCreate(Sender: TObject);
 begin
   CreateController;
   CreatePageFunction;
-end;
-
-procedure TfrmBaseSearch.Image1Click(Sender: TObject);
-begin
-  GlobalRouter.SetRoute(tpMain);
 end;
 
 End.
