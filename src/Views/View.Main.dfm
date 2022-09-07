@@ -1393,7 +1393,7 @@ object frmViewMain: TfrmViewMain
     PrintOptions.Printer = 'Default'
     PrintOptions.PrintOnSheet = 0
     ReportOptions.CreateDate = 44811.038382129600000000
-    ReportOptions.LastChange = 44811.098903055560000000
+    ReportOptions.LastChange = 44811.153768055560000000
     ScriptLanguage = 'PascalScript'
     ScriptText.Strings = (
       ''
@@ -3390,7 +3390,7 @@ object frmViewMain: TfrmViewMain
           DataSetName = 'frxDBDataset1'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
-          Font.Height = -13
+          Font.Height = -15
           Font.Name = 'Arial'
           Font.Style = [fsBold]
           Frame.Typ = [ftBottom]
@@ -3497,7 +3497,7 @@ object frmViewMain: TfrmViewMain
         RowCount = 0
         object Memo9: TfrxMemoView
           AllowVectorExport = True
-          Width = 297.352656214709000000
+          Width = 297.352656210000000000
           Height = 18.897650000000000000
           DataField = 'Name_1'
           DataSet = frxDBDataset1
@@ -3588,21 +3588,6 @@ object frmViewMain: TfrmViewMain
             '[frxDBDataset1."AdmissionDate"]')
           ParentFont = False
           Style = 'Data'
-        end
-        object Memo2: TfrxMemoView
-          AllowVectorExport = True
-          Top = 11.338590000000000000
-          Width = 1046.929133860000000000
-          Height = 22.677180000000000000
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clWindowText
-          Font.Height = -13
-          Font.Name = 'Arial'
-          Font.Style = []
-          Frame.Typ = [ftBottom]
-          Frame.Width = 2.000000000000000000
-          ParentFont = False
-          Style = 'Header line'
         end
       end
       object GroupFooter1: TfrxGroupFooter
