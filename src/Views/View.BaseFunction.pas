@@ -37,6 +37,8 @@ type
     { Private declarations }
     FCurrentControl: TTypeControls;
     FController: TControllerBase;
+  protected
+    function Validate: Boolean;virtual;abstract;
   public
     { Public declarations }
     Constructor Create(AController: TControllerBase);
@@ -56,20 +58,28 @@ begin
   case FCurrentControl of
     tcCreate:
     begin
-      dsFunction.DataSet.Post;
-      FController.CreateItem;
+      if Validate then
+      begin
+        dsFunction.DataSet.Post;
+        FController.CreateItem;
+        Close;
+      end;
     end;
     tcUpdate:
     begin
-      dsFunction.DataSet.Post;
-      FController.UpdateItem;
+      if Validate then
+      begin
+        dsFunction.DataSet.Post;
+        FController.UpdateItem;
+        Close;
+      end;
     end;
     tcSearch:
     begin
       dsFunction.DataSet.First;
+      Close;
     end;
   end;
-  Close;
 end;
 
 procedure TfrmViewBaseFunction.btnRestoreClick(Sender: TObject);

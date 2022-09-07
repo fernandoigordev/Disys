@@ -10,18 +10,20 @@ uses
 
 type
   TfrmViewStoreFunction = class(TfrmViewBaseFunction)
-    DBEdit1: TDBEdit;
+    edName: TDBEdit;
     Label2: TLabel;
     Label3: TLabel;
-    DBEdit2: TDBEdit;
+    edAddress: TDBEdit;
     Label4: TLabel;
     Label5: TLabel;
-    DBEdit4: TDBEdit;
+    edNumber: TDBEdit;
     Label6: TLabel;
-    DBEdit5: TDBEdit;
-    DBComboBox1: TDBComboBox;
+    edCity: TDBEdit;
+    cbbUf: TDBComboBox;
   private
     { Private declarations }
+  protected
+    function Validate: Boolean;override;
   public
     { Public declarations }
   end;
@@ -32,5 +34,37 @@ implementation
 {$R *.dfm}
 
 { TfrmViewStoreFunction }
+
+function TfrmViewStoreFunction.Validate: Boolean;
+begin
+  Result := True;
+  if edName.Text = EmptyStr then
+  begin
+    MessageDlg('Nome da empresa inválido', mtError, [mbOK],0);
+    edName.SetFocus;
+    Result := False;
+  end;
+
+  if Result and (edAddress.Text = EmptyStr) then
+  begin
+    MessageDlg('Endereço da empresa inválido', mtError, [mbOK],0);
+    edAddress.SetFocus;
+    Result := False;
+  end;
+
+  if Result and (cbbUf.Text = EmptyStr) then
+  begin
+    MessageDlg('UF da empresa inválida', mtError, [mbOK],0);
+    cbbUf.SetFocus;
+    Result := False;
+  end;
+
+  if Result and (edCity.Text = EmptyStr) then
+  begin
+    MessageDlg('Cidade da empresa inválida', mtError, [mbOK],0);
+    edCity.SetFocus;
+    Result := False;
+  end;
+end;
 
 end.

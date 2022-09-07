@@ -1,5 +1,7 @@
 inherited frmViewStoreFunction: TfrmViewStoreFunction
   Caption = ''
+  ExplicitLeft = 2
+  ExplicitTop = -188
   PixelsPerInch = 96
   TextHeight = 13
   inherited pnlTop: TPanel
@@ -76,7 +78,7 @@ inherited frmViewStoreFunction: TfrmViewStoreFunction
       Font.Style = []
       ParentFont = False
     end
-    object DBEdit1: TDBEdit
+    object edName: TDBEdit
       Left = 10
       Top = 48
       Width = 615
@@ -91,7 +93,7 @@ inherited frmViewStoreFunction: TfrmViewStoreFunction
       ParentFont = False
       TabOrder = 0
     end
-    object DBEdit2: TDBEdit
+    object edAddress: TDBEdit
       Left = 10
       Top = 120
       Width = 615
@@ -106,7 +108,7 @@ inherited frmViewStoreFunction: TfrmViewStoreFunction
       ParentFont = False
       TabOrder = 1
     end
-    object DBEdit4: TDBEdit
+    object edNumber: TDBEdit
       Left = 474
       Top = 196
       Width = 151
@@ -121,7 +123,7 @@ inherited frmViewStoreFunction: TfrmViewStoreFunction
       ParentFont = False
       TabOrder = 4
     end
-    object DBComboBox1: TDBComboBox
+    object cbbUf: TDBComboBox
       Left = 10
       Top = 196
       Width = 79
@@ -164,7 +166,7 @@ inherited frmViewStoreFunction: TfrmViewStoreFunction
       ParentFont = False
       TabOrder = 2
     end
-    object DBEdit5: TDBEdit
+    object edCity: TDBEdit
       Left = 130
       Top = 196
       Width = 311

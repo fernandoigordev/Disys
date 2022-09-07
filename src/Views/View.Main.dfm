@@ -1393,7 +1393,7 @@ object frmViewMain: TfrmViewMain
     PrintOptions.Printer = 'Default'
     PrintOptions.PrintOnSheet = 0
     ReportOptions.CreateDate = 44811.038382129600000000
-    ReportOptions.LastChange = 44811.038382129600000000
+    ReportOptions.LastChange = 44811.098903055560000000
     ScriptLanguage = 'PascalScript'
     ScriptText.Strings = (
       ''
@@ -3392,7 +3392,7 @@ object frmViewMain: TfrmViewMain
           Font.Color = clWindowText
           Font.Height = -13
           Font.Name = 'Arial'
-          Font.Style = []
+          Font.Style = [fsBold]
           Frame.Typ = [ftBottom]
           Memo.UTF8W = (
             '[frxDBDataset1."name"]')

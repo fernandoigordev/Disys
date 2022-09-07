@@ -46,9 +46,11 @@ begin
         FPageStoreSearch := TfrmStoreSearch.Create(Application);
         FPageStoreSearch.Parent := FContainer;
         FPageStoreSearch.Align := alClient;
-        FPageStoreSearch.Show;
       end;
-     FPageStoreSearch.BringToFront;
+      if Not FPageStoreSearch.Showing then
+        FPageStoreSearch.Show;
+
+      FPageStoreSearch.BringToFront;
     end;
     tpEmployee:
     begin
@@ -57,9 +59,11 @@ begin
         FPageEmployeeSearch := TfrmEmployeeSearch.Create(Application);
         FPageEmployeeSearch.Parent := FContainer;
         FPageEmployeeSearch.Align := alClient;
-        FPageEmployeeSearch.Show;
       end;
-     FPageEmployeeSearch.BringToFront;
+
+      if Not FPageEmployeeSearch.Showing then
+        FPageEmployeeSearch.Show;
+      FPageEmployeeSearch.BringToFront;
     end;
   end;
 

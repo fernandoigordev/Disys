@@ -13,7 +13,6 @@ object frmBaseSearch: TfrmBaseSearch
   Font.Style = []
   OldCreateOrder = False
   Position = poOwnerFormCenter
-  OnClose = FormClose
   OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13

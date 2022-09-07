@@ -1,12 +1,12 @@
 inherited frmViewEmployeeFunction: TfrmViewEmployeeFunction
   Caption = ''
   OnShow = FormShow
+  ExplicitLeft = 2
+  ExplicitTop = -188
   PixelsPerInch = 96
   TextHeight = 13
   inherited pnlTop: TPanel
     inherited Label1: TLabel
-      Width = 831
-      Height = 101
       Caption = 'Manuten'#231#227'o de funcion'#225'rios'
       ExplicitWidth = 296
     end
@@ -233,7 +233,7 @@ inherited frmViewEmployeeFunction: TfrmViewEmployeeFunction
       ParentFont = False
       TabOrder = 6
     end
-    object DBEdit1: TDBEdit
+    object edDate: TDBEdit
       Left = 490
       Top = 117
       Width = 135
@@ -272,7 +272,7 @@ inherited frmViewEmployeeFunction: TfrmViewEmployeeFunction
       ParentFont = False
       TabOrder = 2
     end
-    object DBLookupComboBox1: TDBLookupComboBox
+    object cbbStore: TDBLookupComboBox
       Left = 11
       Top = 117
       Width = 262

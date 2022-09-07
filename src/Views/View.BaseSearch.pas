@@ -54,7 +54,6 @@ type
     procedure btnDeleteClick(Sender: TObject);
     procedure btnSearchClick(Sender: TObject);
     procedure btnCloseClick(Sender: TObject);
-    procedure FormClose(Sender: TObject; var Action: TCloseAction);
   private
     { Private declarations }
   protected
@@ -113,11 +112,6 @@ end;
 procedure TfrmBaseSearch.btnSearchClick(Sender: TObject);
 begin
   FPageFunction.SetOperation(tcSearch);
-end;
-
-procedure TfrmBaseSearch.FormClose(Sender: TObject; var Action: TCloseAction);
-begin
-  Action := caFree;
 end;
 
 procedure TfrmBaseSearch.FormCreate(Sender: TObject);
