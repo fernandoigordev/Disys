@@ -29,7 +29,6 @@ end;
 procedure TRepositoryStoreSqlServer.CreateStore(AModelStore: TModelStore);
 begin
   FQuery.Close;
-  FQuery.Open;
   FQuery.SQL.Text := Concat('INSERT INTO STORE (Name, Address, HouseNumber, City, Uf) ',
                             'VALUES (:Name, :Address, :HouseNumber, :City, :Uf)');
   FQuery.ParamByName('Name').AsString := AModelStore.Name;
@@ -43,7 +42,6 @@ end;
 procedure TRepositoryStoreSqlServer.DeleteStore(AId: Integer);
 begin
   FQuery.Close;
-  FQuery.Open;
   FQuery.SQL.Text := 'DELETE FROM STORE WHERE Id =:Id';
   FQuery.ParamByName('Id').AsInteger := AId;
   FQuery.ExecSQL;
@@ -76,13 +74,11 @@ begin
   end
   else
     Result := Nil;
-
 end;
 
 procedure TRepositoryStoreSqlServer.UpdateStore(AModelStore: TModelStore);
 begin
   FQuery.Close;
-  FQuery.Open;
   FQuery.SQL.Text := Concat('UPDATE STORE SET Name=:Name, Address=:Address, HouseNumber=:HouseNumber, City=:City, Uf=:Uf ',
                             'WHERE Id=:Id');
   FQuery.ParamByName('Id').AsInteger := AModelStore.Id;

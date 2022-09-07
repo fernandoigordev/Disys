@@ -8,13 +8,16 @@ uses
   FireDAC.Stan.Pool, FireDAC.Stan.Async, FireDAC.Phys, FireDAC.Phys.SQLite,
   FireDAC.Phys.SQLiteDef, FireDAC.Stan.ExprFuncs, FireDAC.VCLUI.Wait,
   FireDAC.Phys.SQLiteWrapper.Stat, FireDAC.Phys.MSSQLDef, FireDAC.Phys.ODBCBase,
-  FireDAC.Phys.MSSQL, Data.DB, FireDAC.Comp.Client;
+  FireDAC.Phys.MSSQL, Data.DB, FireDAC.Comp.Client, FireDAC.Stan.Param,
+  FireDAC.DatS, FireDAC.DApt.Intf, FireDAC.DApt, FireDAC.Comp.DataSet;
 
 type
   TDm = class(TDataModule)
     FDConnection1: TFDConnection;
     FDPhysSQLiteDriverLink1: TFDPhysSQLiteDriverLink;
     FDPhysMSSQLDriverLink1: TFDPhysMSSQLDriverLink;
+    QStoreList: TFDQuery;
+    QReport: TFDQuery;
     procedure DataModuleCreate(Sender: TObject);
   private
     { Private declarations }

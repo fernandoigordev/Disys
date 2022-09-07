@@ -11,7 +11,6 @@ inherited frmViewStoreFunction: TfrmViewStoreFunction
   inherited pnlContainer: TPanel
     Padding.Left = 10
     Padding.Right = 10
-    ExplicitTop = 148
     object Label2: TLabel
       Left = 10
       Top = 15
@@ -120,7 +119,7 @@ inherited frmViewStoreFunction: TfrmViewStoreFunction
       Font.Name = 'Tahoma'
       Font.Style = []
       ParentFont = False
-      TabOrder = 2
+      TabOrder = 4
     end
     object DBComboBox1: TDBComboBox
       Left = 10
@@ -163,25 +162,22 @@ inherited frmViewStoreFunction: TfrmViewStoreFunction
         'SE'
         'TO')
       ParentFont = False
+      TabOrder = 2
+    end
+    object DBEdit5: TDBEdit
+      Left = 130
+      Top = 196
+      Width = 311
+      Height = 24
+      DataField = 'City'
+      DataSource = dsFunction
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentFont = False
       TabOrder = 3
     end
-  end
-  object DBEdit5: TDBEdit [3]
-    Left = 130
-    Top = 341
-    Width = 311
-    Height = 24
-    DataField = 'City'
-    DataSource = dsFunction
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -13
-    Font.Name = 'Tahoma'
-    Font.Style = []
-    ParentFont = False
-    TabOrder = 3
-  end
-  inherited dsFunction: TDataSource
-    AutoEdit = False
   end
 end

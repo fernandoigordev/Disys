@@ -54,10 +54,6 @@ uses Router;
 procedure TfrmViewBaseFunction.btnOkClick(Sender: TObject);
 begin
   case FCurrentControl of
-    tcFilter:
-    begin
-
-    end;
     tcCreate:
     begin
       dsFunction.DataSet.Post;

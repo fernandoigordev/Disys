@@ -106,10 +106,6 @@
             <Form>frmViewBaseFunction</Form>
             <FormType>dfm</FormType>
         </DCCReference>
-        <DCCReference Include="src\Views\View.Container.pas">
-            <Form>frmContainer</Form>
-            <FormType>dfm</FormType>
-        </DCCReference>
         <DCCReference Include="src\Router.pas"/>
         <DCCReference Include="src\Views\View.StoreSearch.pas">
             <Form>frmStoreSearch</Form>
@@ -130,6 +126,18 @@
             <DesignClass>TDataModule</DesignClass>
         </DCCReference>
         <DCCReference Include="src\Models\Model.Base.pas"/>
+        <DCCReference Include="src\Models\Model.Employee.pas"/>
+        <DCCReference Include="src\Controllers\Controller.Employee.pas"/>
+        <DCCReference Include="src\Repositories\Employee\Repository.Employee.Interfaces.pas"/>
+        <DCCReference Include="src\Views\View.EmployeeFunction.pas">
+            <Form>frmViewEmployeeFunction</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="src\Views\View.EmployeeSearch.pas">
+            <Form>frmEmployeeSearch</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="src\Repositories\Employee\Repository.Employee.SqlServer.pas"/>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>
@@ -156,6 +164,12 @@
                 </Source>
             </Delphi.Personality>
             <Deployment Version="3">
+                <DeployFile LocalName="Disys.exe" Configuration="Debug" Class="ProjectOutput">
+                    <Platform Name="Win32">
+                        <RemoteName>Disys.exe</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
                 <DeployFile LocalName="Disys.exe" Configuration="Debug" Class="ProjectOutput">
                     <Platform Name="Win32">
                         <RemoteName>Disys.exe</RemoteName>

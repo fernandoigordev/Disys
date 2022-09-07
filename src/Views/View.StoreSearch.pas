@@ -27,8 +27,6 @@ type
 
 implementation
 
-uses UDm;
-
 {$R *.dfm}
 
 { TfrmStoreSearch }
